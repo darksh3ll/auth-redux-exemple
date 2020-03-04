@@ -2,22 +2,25 @@ import React from 'react'
 
 import styled from 'styled-components'
 const Button = styled.button`
-    background-color: palevioletred;
+    color: palevioletred;
+    background-color: transparent;
     text-transform: uppercase;
-    border: none;
+    border:1px solid  palevioletred;
     margin-top: 40px;
     padding: 20px;
     letter-spacing: 2px;
     font-size: 16px;
     font-weight: 100;
     cursor: pointer;
+    border-radius: 5px;
     min-width: 300px;
         height: 50px;
 
       &:hover{
-    background-color: white;
+    background-color: palevioletred;
     border: none;
     transition: 1s;
+    color: white;
     }
     @media screen and (min-width: 425px) {
     min-width: 400px;
@@ -31,10 +34,11 @@ const Button = styled.button`
 
 }
 `
-const ConfirmButton = ({ title, onclick, ...props }) => {
+const ConfirmButton = ({ type, title, onclick, ...props }) => {
   const { primary, disabled } = props
   return (
     <Button
+      type={type}
       primary={primary}
       disabled={disabled}
       onClick={onclick}

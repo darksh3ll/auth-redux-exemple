@@ -1,17 +1,24 @@
 import React from 'react'
 import { Container } from '../../style/Container'
 import styled from 'styled-components'
+import Navbar from '../../components/Navbar'
 const Title = styled.h1`
   font-size: 3em;
   color: white;
+  text-align: center;
 `
 const Home = () => {
   return (
-    <Container>
-      <Title>
-        Home
-      </Title>
-    </Container>
+    <>
+      <Navbar />
+      <Container>
+        <Title>
+            Organisez votre quotidien
+            avec TodoAppReact
+        </Title>
+      </Container>
+    </>
+
   )
 }
 

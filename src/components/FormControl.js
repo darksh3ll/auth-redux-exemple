@@ -7,6 +7,7 @@ const Input = styled.input`
     border: 1px solid palevioletred;
     padding: 10px 15px;
     margin-bottom: 40px;
+    margin-top: 5px;
     font-size: 14px;
     min-width: 300px;
     height: 50px;
@@ -23,14 +24,23 @@ const Input = styled.input`
 
 }
 `
-const FormControl = ({ value, onChange, name, placeholder }) => {
+const Label = styled.label`
+  color: white;
+`
+
+const FormControl = ({ value, onChange, name, placeholder, ref, label }) => {
   return (
-    <Input
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-      name={name}
-    />
+    <div>
+      <Label>{label}</Label>
+      <Input
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        name={name}
+        ref={ref}
+      />
+    </div>
+
   )
 }
 
