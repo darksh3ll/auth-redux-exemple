@@ -36,6 +36,7 @@ const Button = styled.button`
 `
 const ConfirmButton = ({ type, title, onclick, ...props }) => {
   const { primary, disabled } = props
+  console.log(disabled);
   return (
     <Button
       type={type}

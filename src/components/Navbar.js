@@ -11,7 +11,6 @@ const Nav = styled.div`
  & p {
  color: white;
  margin: 10px;
- font-size: larger;
  border: 1px solid white;
  padding: 10px;
  border-radius: 5px;
